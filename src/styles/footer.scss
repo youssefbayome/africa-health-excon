@@ -1,16 +1,21 @@
 .container {
   background-color: black;
   display: flex;
-  width: 100%;
+  // width: 100%;
   flex-direction: column;
   justify-content: flex-end;
   padding: 10px 3rem;
   @media (max-width: 768px) {
     display: flex;
-    img {
-      display: none;
-      width: 100px;
-      height: auto;
+  }
+  .inner {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+    @media (max-width: 768px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
   }
 }

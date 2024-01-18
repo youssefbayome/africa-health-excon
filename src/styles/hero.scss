@@ -6,7 +6,6 @@ $transparent-color: #c99928c9;
     padding: 0;
   }
   // height: 60vh;
-  padding: 2rem 3rem;
 
   .image-section {
     display: flex;
@@ -40,10 +39,28 @@ $transparent-color: #c99928c9;
     }
     @media (max-width: 768px) {
       border-radius: 0;
-      img{
+      img {
         width: 50%;
         margin-top: 10px;
       }
     }
   }
+}
+.circle-container {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.circle {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
+  border: 1px dashed #ccc;
+  border-radius: 50%;
+  // padding: 10px;
+  width: 86px;
+  height: 86px;
 }

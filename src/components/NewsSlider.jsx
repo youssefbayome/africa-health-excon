@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 import styles from '../styles/siwper.module.scss'; // Import the module styles
 export const NewsSlider = ({ newsList }) => {
-  const slidesPerView = window.innerWidth < 768 ? 1 : 3; 
+  const slidesPerView = window.innerWidth < 768 ? 1 : 3;
 
   return (
     <Swiper

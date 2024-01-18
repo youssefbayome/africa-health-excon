@@ -9,12 +9,7 @@ export default function Footer() {
     <>
       <div className="container">
         <Button title={'go to top'} width={'100%'} />
-        <div
-          style={{
-            display: 'flex',
-            justifyContent: 'space-between',
-            marginTop: '60px',
-          }}>
+        <div className='inner'>
           <div>
             <img
               src={Logo}

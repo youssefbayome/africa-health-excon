@@ -14,6 +14,7 @@ export default function Registeration() {
       <div
         style={{
           display: 'flex',
+          flexWrap: 'wrap',
           gap: 20,
           justifyContent: 'space-evenly',
           alignItems: 'center',

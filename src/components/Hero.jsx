@@ -4,7 +4,7 @@ import Africa from '../Images/Rectangle.png';
 export default function HeroSection() {
   const remainingTime = [{ days: 1, hours: 5, minutes: 55, seconds: 55 }];
   return (
-    <>
+    <div style={{ padding: '2rem 3rem' }}>
       <div className="video-section">
         <video
           width="100%"
@@ -27,6 +27,22 @@ export default function HeroSection() {
           </div>
         </div>
       </div>
-    </>
+      <div>
+        <div className="circle-container">
+          <div
+            style={{ width: '70%', height: 2, backgroundColor: '#BDBDBD' }}
+          />
+          {Object.entries(remainingTime[0]).map(([key, value]) => (
+            <div className="circle">
+              <p>{key}</p>
+              <p>{value}</p>
+            </div>
+          ))}
+          <p style={{ fontWeight: 'bold', fontSize: 32, alignSelf: 'end' }}>
+            ...to go
+          </p>
+        </div>
+      </div>
+    </div>
   );
 }
