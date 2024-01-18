@@ -9,8 +9,8 @@ export default function Footer() {
     <>
       <div className="container">
         <Button title={'go to top'} width={'100%'} />
-        <div className='inner'>
-          <div>
+        <div className="inner">
+          <div className="logo-1">
             <img
               src={Logo}
               alt="health exhipiton"

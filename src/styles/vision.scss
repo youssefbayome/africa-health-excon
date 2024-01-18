@@ -16,7 +16,7 @@
   .stats {
     flex: 1;
     .first {
-      max-width: 60%;
+      width: 60%;
     }
     @media (max-width: 768px) {
       flex-direction: column;

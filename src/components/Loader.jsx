@@ -11,6 +11,7 @@ export default function Loader({ loading }) {
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
+            margin: '20px',
           }}>
           loading
         </div>
