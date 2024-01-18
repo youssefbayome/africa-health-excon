@@ -38,7 +38,7 @@ export default function HeroSection() {
               <p>{value}</p>
             </div>
           ))}
-          <p style={{ fontWeight: 'bold', fontSize: 32, alignSelf: 'end' }}>
+          <p className='to-go'>
             ...to go
           </p>
         </div>

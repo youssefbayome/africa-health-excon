@@ -19,6 +19,7 @@ export const NewsSlider = ({ newsList }) => {
       spaceBetween={40}
       slidesPerView={slidesPerView}
       navigation
+      modules={[Navigation]}
       pagination={{ clickable: true }}>
       {newsList &&
         newsList?.NewsList.map((news) => (

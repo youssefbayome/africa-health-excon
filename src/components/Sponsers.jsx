@@ -1,16 +1,16 @@
 import React from 'react';
 import '../styles/partners.scss';
 import { Swiper, SwiperSlide } from 'swiper/react';
-
+import { Navigation } from 'swiper/modules';
 export default function Sponsers({ data }) {
   const { Partners } = data || {};
- const swiperStyles = {
-   navigation: {
-     nextEl: '.swiper-button-next',
-     prevEl: '.swiper-button-prev',
-     color: 'gold', // Set the color to gold
-   },
- };
+  const swiperStyles = {
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+      color: 'gold', // Set the color to gold
+    },
+  };
 
   return (
     <>
@@ -35,6 +35,7 @@ export default function Sponsers({ data }) {
                   justifyContent: 'center',
                   padding: '0 2rem',
                 }}
+                modules={[Navigation]}
                 navigation={swiperStyles.navigation} // Use custom styles for navigation
                 pagination={{ clickable: true }}
                 className="swiper-container">
@@ -51,8 +52,8 @@ export default function Sponsers({ data }) {
                     />
                   </SwiperSlide>
                 ))}
-                <div className="swiper-button-next"  />
-                <div className="swiper-button-prev"  />
+                <div className="swiper-button-next" />
+                <div className="swiper-button-prev" />
               </Swiper>
             </div>
           </div>

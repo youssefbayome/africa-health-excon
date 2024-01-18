@@ -1,0 +1,60 @@
+.wrapper {
+  display: flex;
+  position: relative;
+  // flex-direction: column;
+  h2,
+  p {
+    margin-left: 5rem;
+    @media (max-width: 768px) {
+      margin-left: 0;
+    }
+  }
+  h2 {
+    font-size: 32px;
+  }
+
+  .stats {
+    flex: 1;
+    .first {
+      max-width: 60%;
+    }
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+    .numbers {
+      height: 280px;
+      display: flex;
+      align-items: center;
+      text-transform: capitalize;
+      width: 100%;
+      background-color: #c99a28;
+      color: white;
+      @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: 20px;
+      }
+    }
+    .head {
+      font-weight: 300;
+      color: black;
+      font-size: 24px;
+    }
+    .number {
+      font-size: 55px;
+    }
+  }
+  .image {
+    position: absolute;
+    right: 0;
+    top: 2.5rem;
+  }
+  img {
+    object-fit: cover;
+    height: 300px;
+    width: 100%;
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+}

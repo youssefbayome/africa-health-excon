@@ -25,9 +25,11 @@
     // }
   }
   @media (max-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
     padding: 10px;
     P {
-      font-size: 14px;
+      font-size: 12px;
     }
     img {
       width: 30px;

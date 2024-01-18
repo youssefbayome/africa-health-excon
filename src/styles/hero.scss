@@ -9,20 +9,26 @@ $transparent-color: #c99928c9;
 
   .image-section {
     display: flex;
-    background-color: $transparent-color;
+    background: linear-gradient(to right, #685935f1 50%, #c99a28 50%);
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     img {
-      width: 70%;
+      width: 80%;
       border-radius: 15px;
     }
-
+    h3 {
+      font-size: 32px;
+      @media (max-width: 768px) {
+        font-size: 20px;
+      }
+    }
     h3,
     .details {
       color: #fff;
+
       text-transform: uppercase;
       letter-spacing: 10px;
       display: flex;
@@ -52,6 +58,14 @@ $transparent-color: #c99928c9;
   justify-content: center;
   align-items: center;
   margin-top: 20px;
+  .to-go {
+    font-size: 32px;
+    font-weight: bold;
+    align-self: end;
+    @media (max-width: 768px) {
+      font-size: 12px !important;
+    }
+  }
 }
 .circle {
   display: flex;
@@ -63,4 +77,12 @@ $transparent-color: #c99928c9;
   // padding: 10px;
   width: 86px;
   height: 86px;
+  @media (max-width: 768px) {
+    width: 45px;
+    height: 45px;
+
+    p {
+      font-size: 12px;
+    }
+  }
 }

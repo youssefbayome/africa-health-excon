@@ -50,7 +50,7 @@ const Header = () => {
         className={`mobile-panel${
           isMobilePanelOpen ? ' mobile-panel-open' : ''
         }`}>
-        <button onClick={toggleMobilePanel}>close</button>
+        <button onClick={toggleMobilePanel} className='close-btn'>close</button>
         <div className="social-links">
           <a href="#">Social Link 1</a>
           <a href="#">Social Link 2</a>
