@@ -1,24 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import ExconCategories from "./components/ExconCategories";
+import ExconNews from "./components/ExconNews";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import HeroSection from "./components/Hero";
+import Objectivies from "./components/Objectivies";
+import Registeration from "./components/Registeration";
+import Sponsers from "./components/Sponsers";
+import { useAxios } from "./lib/useAxios";
 
 function App() {
+  const apiURL = 'https://api.africahealthexcon.com/api/Home/GetHome';
+  const { data, error, loading } = useAxios({
+    url: apiURL,
+  });
+  console.log(data)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header />
+      <HeroSection />
+      <Objectivies data={data} loading={loading} error={error} />
+      <ExconNews data={data} loading={loading} error={error} />
+      <ExconCategories data={data?.List[1]} loading={loading} error={error} />
+      <Registeration />
+      <Sponsers data={data?.List[3]} />
+      <Footer />
+    </>
   );
 }
 

@@ -1,0 +1,27 @@
+.sponsor-container {
+  position: relative;
+  padding: 1.5rem 0;
+
+  &:not(.swiper-container) {
+    &::after {
+      content: '';
+      height: 1px; /* You can change this if you want smaller/bigger borders */
+      width: 50%;
+      position: absolute;
+      top: 0;
+      right: 50%;
+      transform: translateX(50%);
+      background-color: #c99a28; /* The color of your border */
+    }
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: #c99a28;
+  }
+}
+
+.span {
+  font-size: 30px;
+  font-weight: 500;
+}

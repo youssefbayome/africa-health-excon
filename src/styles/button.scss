@@ -1,0 +1,8 @@
+.button {
+  background-color: #c99a28;
+  padding: 10px 20px;
+  @media (max-width: 768px) {
+    font-size: 12px;
+    padding: 2px;
+  }
+}

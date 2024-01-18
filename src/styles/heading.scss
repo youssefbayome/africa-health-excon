@@ -1,0 +1,59 @@
+/* src/HeadingWithBackground.css */
+
+.heading-with-background {
+  position: relative;
+  text-align: center;
+  margin: 30px 0;
+  width: 100%;
+}
+
+.text {
+  font-size: 3rem; /* Set your desired font size */
+  margin-bottom: 0; /* Remove default margin */
+  z-index: 2; /* Ensure the text is above the background */
+  font-weight: normal;
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
+}
+
+.background-text {
+  text-transform: uppercase;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 5rem; /* Set your desired font size */
+  color: rgb(175, 175, 175); /* Set your desired background text color */
+  opacity: 0.2; /* Set your desired background text opacity */
+  z-index: 1; /* Ensure the background text is behind the main text */
+  letter-spacing: 5px;
+  width: 100%;
+  @media (max-width: 768px) {
+    font-size: 2rem;
+  }
+}
+
+.with-lines {
+  position: relative;
+
+  .line {
+    z-index: -1;
+    position: absolute;
+    width: calc(50% / 3); /* Adjust the width of the lines as needed */
+    height: 3px;
+    background-color: #c99a28;
+  }
+
+  .before {
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+
+  .after {
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+  }
+}

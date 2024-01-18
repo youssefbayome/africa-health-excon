@@ -1,0 +1,37 @@
+.category-item {
+  display: flex;
+  //   margin-right: 10px;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  position: relative;
+  padding: 2rem;
+  p {
+    font-size: 16px;
+    width: 80%;
+    text-align: center;
+  }
+  ::after {
+    content: '';
+    height: 50%; //You can change this if you want smaller/bigger borders
+    width: 1px;
+    transform: translateY(-50%);
+    position: absolute;
+    right: 0;
+    top: 50%; // If you want to set a smaller height and center it, change this value
+    background-color: #707070; // The color of your border
+    // &:last-child::after {
+    //   display: none !important;
+    // }
+  }
+  @media (max-width: 768px) {
+    padding: 10px;
+    P {
+      font-size: 14px;
+    }
+    img {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}

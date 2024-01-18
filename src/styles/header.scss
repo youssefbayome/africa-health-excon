@@ -1,0 +1,109 @@
+$background-color: #000;
+$gold-color: #c99a28;
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $background-color;
+  padding: 15px;
+  color: white;
+  padding: 0 6rem;
+
+  .logo,
+  .social-links,
+  .nav-links,
+  .secondary-logo {
+    margin: 0 10px;
+  }
+  .logo img {
+    height: 90px;
+  }
+  .social-links {
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+
+    select {
+      margin-right: 20px;
+    }
+  }
+  .registerButton {
+    background-color: $gold-color;
+    border: none;
+    color: white;
+    padding: 8px 40px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 50px;
+  }
+  @media (max-width: 768px) {
+    flex-direction: row;
+    padding: 5px 10px;
+    .logo,
+    .social-links,
+    .nav-links,
+    .secondary-logo {
+      margin: 10px 0;
+    }
+  }
+  .nav-links,
+  .social-links {
+    display: flex;
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  .mobile-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+
+    @media (max-width: 768px) {
+      display: block;
+    }
+  }
+
+  .mobile-panel {
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px; // Adjust the width as needed
+    height: 100vh;
+    background-color: #333;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    display: none;
+
+    &.mobile-panel-open {
+      display: flex;
+    }
+
+    .social-links {
+      display: flex;
+      flex-direction: column;
+
+      a {
+        color: white;
+        margin: 10px 0;
+      }
+    }
+
+    .nav-links {
+      display: none;
+    }
+  }
+
+  .mobile-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+
+    @media (max-width: 768px) {
+      display: block;
+    }
+  }
+}

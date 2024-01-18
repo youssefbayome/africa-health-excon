@@ -1,0 +1,47 @@
+.swiper-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .card {
+    position: relative; /* Added position relative to act as a positioning context */
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 100%;
+    max-width: 400px;
+    height: 400px;
+
+    .card-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .card-content {
+      position: absolute;
+      bottom: 0; /* Adjust as needed to place the text at the desired position */
+      width: 100%;
+      padding: 20px;
+      box-sizing: border-box; /* Ensure padding is included in the width calculation */
+      background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.7),
+        rgba(0, 0, 0, 0.814)
+      ); /* Dark background with linear gradient */
+
+      .card-title {
+        margin: 0;
+        font-size: 14px;
+        color: #fff;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #c99a28;
+}
