@@ -6,12 +6,15 @@ export default function HeroSection() {
   return (
     <div>
       <div className="video-section">
-        <video
+        <iframe
+          title="ahe"
           width="100%"
           height="100%"
-          controls
-          autoPlay
-          src="https://www.youtube.com/embed/trn6CkJWB-w?si=WotIxNhwEB2pfEEy"></video>
+          frameBorder="0"
+          allow="autoplay; encrypted-media"
+          allowFullScreen
+          muted
+          src="https://www.youtube.com/embed/trn6CkJWB-w?si=WotIxNhwEB2pfEEy"></iframe>
         <div className="image-section">
           <img src={Africa} alt="africa" />
           <h3>africa</h3>

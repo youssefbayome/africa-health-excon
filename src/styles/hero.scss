@@ -2,6 +2,7 @@ $transparent-color: #c99928c9;
 .video-section {
   display: flex;
   padding: 2rem 3rem;
+  height: 60vh;
   @media (max-width: 768px) {
     flex-direction: column;
     padding: 10px;
