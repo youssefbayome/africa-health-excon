@@ -5,19 +5,22 @@ import { navigaitionLinks } from '../lib/data';
 import Button from './Button';
 import '../styles/footer.scss';
 export default function Footer() {
+  const handleGoToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
   return (
     <>
       <div className="container">
-        <Button title={'go to top'} width={'100%'} />
+        <Button title={'go to top'} width={'100%'} onClick={handleGoToTop} />
         <div className="inner">
           <div className="logo-1">
             <img
               src={Logo}
               alt="health exhipiton"
-              style={{ height: '250px' }}
+              // style={{ height: '250px' }}
             />
           </div>
-          <div className="links" style={{ display: 'flex', gap: '10rem' }}>
+          <div className="links">
             <div>
               <p className="header-tag">Quick links</p>
               <ul style={{ display: 'flex', flexDirection: 'column' }}>

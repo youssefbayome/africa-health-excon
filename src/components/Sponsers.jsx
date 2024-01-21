@@ -28,13 +28,6 @@ export default function Sponsers({ data }) {
               <Swiper
                 spaceBetween={10}
                 slidesPerView={4}
-                style={{
-                  width: '50%',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  padding: '0 2rem',
-                }}
                 modules={[Navigation]}
                 navigation={swiperStyles.navigation} // Use custom styles for navigation
                 pagination={{ clickable: true }}

@@ -5,6 +5,7 @@ import '../styles/header.scss';
 import Logo from '../Images/favicon2.png';
 import UPALogo from '../Images/UPALogo14.png';
 import { socialLinks, navigaitionLinks } from '../lib/data';
+import Button from './Button';
 const Header = () => {
   const [isMobilePanelOpen, setMobilePanelOpen] = useState(false);
 
@@ -50,12 +51,38 @@ const Header = () => {
         className={`mobile-panel${
           isMobilePanelOpen ? ' mobile-panel-open' : ''
         }`}>
-        <button onClick={toggleMobilePanel} className='close-btn'>close</button>
+        <Button
+          onClick={toggleMobilePanel}
+          className="close-btn"
+          title={'close'}
+        />
+
         <div className="social-links">
-          <a href="#">Social Link 1</a>
-          <a href="#">Social Link 2</a>
-          <a href="#">Social Link 3</a>
-          {/* Add more social links as needed */}
+          <ul
+            style={{
+              display: 'flex',
+              gap: 10,
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}>
+            {socialLinks.map((link, i) => (
+              <li key={i}>{link.icon}</li>
+            ))}
+          </ul>
+          <div
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              gap: 20,
+              marginBottom: 100,
+            }}>
+            {navigaitionLinks.map((link, i) => (
+              <select key={i}>
+                <option>{link.name}</option>
+              </select>
+            ))}
+          </div>
+          <Button title={'register'} borderRadius={50} />
         </div>
       </div>
       <div className="secondary-logo">

@@ -7,13 +7,13 @@ export default function Loader({ loading }) {
         <div
           style={{
             width: '100%',
-            height: '50px',
+            height: '100px',
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
-            margin: '20px',
+            margin: '3rem 0',
           }}>
-          loading
+          loading...
         </div>
       ) : null}
     </div>
